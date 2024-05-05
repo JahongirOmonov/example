@@ -95,11 +95,11 @@ class Editorial(BaseModel):
     image = models.ImageField(upload_to='journal/images/%Y/%m/%d/', blank=True, null=True)
     content = RichTextField()
     objects = models.Manager()
-    class Meta:
-        ordering = ['-created_at']
-        indexes = [
-            models.Index(fields=['-created_at']),
-        ]
+    # class Meta:
+    #     ordering = ['-created_at']
+    #     indexes = [
+    #         models.Index(fields=['-created_at']),
+    #     ]
 
     def __str__(self):
         return self.content

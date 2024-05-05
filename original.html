@@ -20,16 +20,15 @@
                     {% blocktrans %} Сурхандаря: наука и мнение {% endblocktrans %}
                 </a>
                 {% endif %}
-
+                <div class="col-lg offset-lg-2">
+                    <img style="width: 5rem;" src="{% static 'images/book.png' %}"
+                         alt="book">
+                </div>
                 <button class="navbar-toggler bg-lime" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="col-lg offset-lg-2">
-                    <img style="width: 5rem;" src="{% static 'images/book.png' %}"
-                         alt="book">
-                </div>
 
                 <form id="language-form" action="{% url 'set_language' %}" method="post" class="borderim">
                     {% csrf_token %}
